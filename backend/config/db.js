@@ -1,5 +1,12 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose")
 
-export const connectDB = async () => {
-    await mongoose.connect('mongodb+srv://fooddeli:fooddeli@fooddeli.iacfhcd.mongodb.net/?').then(() => console.log("DataBase Connected"));
+   
+async function connectDB(){
+    try{
+        await mongoose.connect(process.env.MONGODB_URI)
+    }catch(err){
+        console.log(err)
+    }
 }
+
+module.exports = connectDB
