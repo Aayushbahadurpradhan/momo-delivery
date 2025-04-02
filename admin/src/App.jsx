@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-  const url = "https://https://momo-delivery.vercel.app"
+  const url = "https://momo-delivery.vercel.app"
 
   return (
     <div>
